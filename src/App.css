@@ -1,0 +1,144 @@
+.app {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.app-container {
+  width: 1000px;
+  max-width: 100%;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.spotlight__wrapper {
+  border-radius: 12px;
+  border: 1px solid #dfe1e5;
+  margin: auto;
+  max-width: 1000px;
+  background-color: #fff;
+}
+
+.spotlight__wrapper:hover,
+.spotlight__wrapper:focus {
+  background-color: #fff;
+  box-shadow: 0 1px 6px rgb(32 33 36 / 28%);
+  border-color: rgba(223, 225, 229, 0);
+}
+
+.loader {
+  display: block;
+  width: 18px;
+  height: 18px;
+  border: 0;
+  color: #000;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 auto;
+}
+
+.spotlight__answer {
+  min-height: 115px;
+  line-height: 1.5em;
+  letter-spacing: 0.1px;
+  padding: 10px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spotlight__answer p::after {
+  content: "";
+  width: 2px;
+  height: 14px;
+  position: relative;
+  top: 2px;
+  left: 2px;
+  background: black;
+  display: inline-block;
+  animation: cursor-blink 1s steps(2) infinite;
+}
+
+@keyframes cursor-blink {
+  0% {
+    opacity: 0;
+  }
+}
+
+/* QuizForm.css */
+.quiz-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: auto;
+  align-items: flex-start; /* Left-align the form */
+}
+
+.form-group {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 16px;
+  align-items: start;
+  gap: 10px;
+  width: 100%;
+}
+
+.form-group-btn{
+  display: flex;
+  width: 100%;
+  justify-content: end;
+}
+
+.form-label {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+  text-align: left;
+  width: 40%;
+}
+
+.form-input,
+.form-select {
+  width: 100%; /* Make all input fields 100% width */
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-button {
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 4px;
+  width: 124px;
+}
+
+.form-button:hover {
+  background-color: #45a049;
+}
+
+.validation-error{
+  color: red;
+  text-align: left;
+}
+
+.input-group{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.scrollable-pre {
+  max-height: 300px; /* Set your desired max height */
+  overflow-y: auto;
+  width: 100%;
+  text-align: left;
+}
