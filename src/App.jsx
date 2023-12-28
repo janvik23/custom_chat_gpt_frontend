@@ -3,6 +3,8 @@ import axios from "axios";
 import "./App.css";
 import QuizForm from "./QuizForm";
 
+const baseUrl = process.env.REACT_APP_API_URL;
+
 function App() {
   const [loading, setLoading] = useState(false);
   const [answer, setAnswer] = useState(undefined);
@@ -11,7 +13,7 @@ function App() {
     event.preventDefault();
     try {
       setLoading(true);
-      const res = await axios.post("/api/ask", { ...data });
+      const res = await axios.post(`${baseUrl}/ask`, { ...data });
       if (res.status !== 200) {
         throw new Error("Something went wrong");
       }
