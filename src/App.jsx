@@ -38,7 +38,7 @@ function App() {
           />
           <div className="spotlight__answer">
             <pre className="scrollable-pre">
-              {answer ? <p>{answer}</p> : !loading ? <p>No Data Available</p> : null}
+              {answer && <p>{answer}</p>}
             </pre>
           </div>
         </div>
