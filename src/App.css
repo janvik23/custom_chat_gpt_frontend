@@ -141,3 +141,16 @@
   width: 100%;
   text-align: left;
 }
+
+.copy-button{
+  margin-bottom: 20px;
+  background-color: #e1e1e1;
+  color: black;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.copy-button:hover{
+  background-color: #cbcccb;
+}

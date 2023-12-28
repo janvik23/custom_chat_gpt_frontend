@@ -155,7 +155,7 @@ const QuizForm = ({ onSubmit, loading }) => {
             value={formData.number}
             onChange={handleInputChange}
             className="form-input"
-            min={5}
+            min={0}
           />
           {validationErrors.number && (
             <span className="validation-error">{validationErrors.number}</span>

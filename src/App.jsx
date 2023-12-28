@@ -27,6 +27,15 @@ function App() {
     }
   };
 
+  const copyToClipboard = async () => {
+    try {
+      await navigator.clipboard.writeText(answer);
+      alert("Answer copied to clipboard!");
+    } catch (err) {
+      console.error("Unable to copy to clipboard", err);
+    }
+  };
+
   return (
     <div className="app">
       <div className="app-container">
@@ -39,10 +48,18 @@ function App() {
             loading={loading}
           />
           <div className="spotlight__answer">
-            <pre className="scrollable-pre">
-              {answer && <p>{answer}</p>}
-            </pre>
+            <pre className="scrollable-pre">{answer && <p>{answer}</p>}</pre>
           </div>
+          {answer && (
+            <div>
+              <button
+                className="copy-button"
+                onClick={copyToClipboard}
+              >
+                Copy Answer
+              </button>
+            </div>
+          )}
         </div>
       </div>
     </div>
